@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "./layout";
 import DashboardPage from "./dashboard/page";
+import Layout from "./Layout";
 
 const routers = createBrowserRouter([
     {
@@ -44,7 +44,7 @@ const routers = createBrowserRouter([
                 element: <h1 className="title">Inventory</h1>
             },
             {
-                path: "setthing",
+                path: "setthings",
                 element: <h1 className="title">Setthing</h1>
             },
         ]
