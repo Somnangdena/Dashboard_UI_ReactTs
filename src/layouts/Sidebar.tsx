@@ -28,9 +28,9 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(({collapsed}, ref) => {
             navbarLinks.map((navbarLink) => (
               <nav 
               key={navbarLink.title}
-              className={cn("sidebar-group")}
+              className={cn("sidebar-group", collapsed && "md:items-center")}
               >
-                <p className={cn("sidebar-group-title")}>
+                <p className={cn("sidebar-group-title", collapsed && "md:w-11.25")}>
                   {navbarLink.title}
                 </p>
                 {
@@ -38,7 +38,9 @@ const Sidebar = forwardRef<HTMLElement, SidebarProps>(({collapsed}, ref) => {
                     <NavLink 
                     key={link.label}
                     to={link.path}
-                    className={cn("sidebar-item")}>
+                    className={cn("sidebar-item",
+                     collapsed && "md:w-11.25" 
+                    )}>
                       <link.icon
                       size={22}
                       className="shrink-0"

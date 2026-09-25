@@ -44,7 +44,7 @@ const routers = createBrowserRouter([
                 element: <h1 className="title">Inventory</h1>
             },
             {
-                path: "setthings",
+                path: "settings",
                 element: <h1 className="title">Setthing</h1>
             },
         ]
